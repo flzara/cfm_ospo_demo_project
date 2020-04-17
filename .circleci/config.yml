@@ -38,7 +38,6 @@ shared: &shared
 workflows:
     standard:
         jobs:
-            - cfm_ospo_demo_project-py35-pytest53 
             - cfm_ospo_demo_project-py36-pytest53 
             - cfm_ospo_demo_project-py37-pytest53 
             - cfm_ospo_demo_project-py38-pytest53 
@@ -79,7 +78,7 @@ jobs:
         <<: *shared
     cfm_ospo_demo_project-py39-pytest53:
         environment:
-            CI_PYTHON: 'python=3.9'
+            CI_PYTHON: 'python'
             CI_PYTEST: 'pytest=5.3'
         <<: *shared
     nightly_build:
